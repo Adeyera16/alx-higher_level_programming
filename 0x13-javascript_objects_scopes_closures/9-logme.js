@@ -1,4 +1,8 @@
 #!/usr/bin/node
-let count = 0;
-exports.logMe = function (item) { console.log(`${count++}: ${item}`); };
 
+let trackLogs = 0;
+
+exports.logMe = function (item) {
+  console.log(`${trackLogs}: ${item}`);
+  trackLogs++;
+};
